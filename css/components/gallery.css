@@ -1,0 +1,28 @@
+
+
+.main-contant{
+    margin-top:  40px;
+}
+
+.search-bar{
+    margin-bottom: 5em;
+}
+
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+    gap: 0px;
+    padding: 15px;
+    grid-auto-flow: dense;
+    margin:  0 auto;
+    background-color: rgba(109, 118, 128, 0.911);
+    
+}
+
+img {
+    border-radius: 2px;
+    height: 8em;
+    width: 8em;
+}
+

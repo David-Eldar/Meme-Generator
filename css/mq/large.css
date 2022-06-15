@@ -1,0 +1,13 @@
+/* .main-layout {
+    max-width: 980px;
+} */
+
+.main-nav li>a {
+    height: 130px;
+    width: 130px;
+}
+
+
+.main-header .hamburger-btn {
+    display: none;
+}

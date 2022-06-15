@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" />
+    <title>meme-image-gallery</title>
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="header-content main-layout flex align-center space-between">
+            <div class="main-logo">MeeeeMiM <span class="logo-green">🐑</span></div>
+
+            <ul class="main-nav flex clean-list">
+                <li><a class="active" href="#" onclick="onActivePage(this)">Gallery</a></li>
+                <li><a class="active" href="#" onclick="onActivePage(this)">Memes</a></li>
+                <li><a class="active" href="#" onclick="onActivePage(this)">About</a></li>
+            </ul>
+            <button class="hamburger-btn" onclick="toggleHamburger()">☰</button>
+        </div>
+    </header>
+
+    <main class="main-contant">
+        <div class="search-bar">
+            <input type="text" name="txt" placeholder="search image">
+            or upload <input type="file" class="file-input btn" name="image" onchange="onImgInput(event)" />
+        </div>
+
+        <section class="gallery-container">
+
+            <img src="img-copy/001.jpeg" alt="">
+            <img src="img-copy/002.jpeg" alt="">
+            <img src="img-copy/003.jpeg" alt="">
+            <img src="img-copy/004.jpeg" alt="">
+            <img src="img-copy/006.jpeg" alt="">
+            <!-- <li class="meme"> <img src="img-copy/002.jpeg" alt=""></li>
+            <li class="meme"> <img src="img-copy/003.jpeg" alt=""></li>
+            <li class="meme"> <img src="img-copy/004.jpeg" alt=""></li>
+            <li class="meme"> <img src="img-copy/006.jpeg" alt=""></li> -->
+
+        </section>
+    </main>
+    <script src="js/gallery-controller.js"></script>
+</body>
+
+</html>

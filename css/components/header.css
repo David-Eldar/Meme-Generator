@@ -1,0 +1,44 @@
+.main-header {
+    background-color:rgba(78, 140, 191, 0.91);
+    box-shadow: inset 0px -6px 0px #1e1e1e;
+  }
+  
+  .header-content {
+    padding-left: 6%;
+    padding-right: 7%;
+  }
+  
+  .main-logo {
+    font-family: eurofurence;
+    font-size: 2.5em;
+    color: white;
+  }
+  
+  /* .logo-green {
+    color: var(--clr1);
+  } */
+  
+  .main-nav li {
+    border-inline-end: 1px solid #1d1d1d;
+  }
+  
+  .main-nav li:first-child {
+    border-inline-start: 1px solid #1d1d1d;
+  }
+  
+  .main-nav li > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: lato-bold;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .main-nav li > a:hover {
+    color: rgb(0, 171, 114);
+  }
+  
+  .active {
+    box-shadow: 0 -6px inset var(--clr1);
+  }
