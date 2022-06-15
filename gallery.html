@@ -9,7 +9,7 @@
     <title>meme-image-gallery</title>
 </head>
 
-<body>
+<body onload="onInit()">
     <header class="main-header">
         <div class="header-content main-layout flex align-center space-between">
             <div class="main-logo">MeeeeMiM <span class="logo-green">🐑</span></div>
@@ -25,17 +25,41 @@
 
     <main class="main-contant">
         <div class="search-bar">
+            <!-- <a href="editor.html">Edit Meme</a> -->
             <input type="text" name="txt" placeholder="search image">
             or upload <input type="file" class="file-input btn" name="image" onchange="onImgInput(event)" />
         </div>
 
+        <div class="canvas-container flex" >
+            <div class="canvad-nav-bar"></div>
+            <canvas class="canvas-editor" width="400" height="400" style="outline:1px solid rgb(0, 0, 0)"></canvas>
+            <img src="" alt="" class="selected-img" />
+          </div>
+
         <section class="gallery-container">
 
-            <img src="img-copy/001.jpeg" alt="">
-            <img src="img-copy/002.jpeg" alt="">
-            <img src="img-copy/003.jpeg" alt="">
-            <img src="img-copy/004.jpeg" alt="">
-            <img src="img-copy/006.jpeg" alt="">
+           
+
+
+            <!-- <img src="meme-imgs (square)/1.jpg" alt="">
+            <img src="meme-imgs (square)/2.jpg" alt="">
+            <img src="meme-imgs (square)/3.jpg" alt="">
+            <img src="meme-imgs (square)/4.jpg" alt="">
+            <img src="meme-imgs (square)/5.jpg" alt="">
+            <img src="meme-imgs (square)/6.jpg" alt="">
+            <img src="meme-imgs (square)/7.jpg" alt="">
+            <img src="meme-imgs (square)/8.jpg" alt="">
+            <img src="meme-imgs (square)/9.jpg" alt="">
+            <img src="meme-imgs (square)/10.jpg" alt="">
+            <img src="meme-imgs (square)/11.jpg" alt="">
+            <img src="meme-imgs (square)/12.jpg" alt="">
+            <img src="meme-imgs (square)/13.jpg" alt="">
+            <img src="meme-imgs (square)/14.jpg" alt="">
+            <img src="meme-imgs (square)/15.jpg" alt="">
+            <img src="meme-imgs (square)/16.jpg" alt="">
+            <img src="meme-imgs (square)/17.jpg" alt="">
+            <img src="meme-imgs (square)/18.jpg" alt=""> -->
+            
             <!-- <li class="meme"> <img src="img-copy/002.jpeg" alt=""></li>
             <li class="meme"> <img src="img-copy/003.jpeg" alt=""></li>
             <li class="meme"> <img src="img-copy/004.jpeg" alt=""></li>
@@ -43,7 +67,9 @@
 
         </section>
     </main>
+    <script src="js/header-controller.js"></script>
     <script src="js/gallery-controller.js"></script>
+    <script src="js/editor-controller.js"></script>
 </body>
 
 </html>

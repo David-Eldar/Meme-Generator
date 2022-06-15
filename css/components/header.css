@@ -1,6 +1,6 @@
 .main-header {
     background-color:rgba(78, 140, 191, 0.91);
-    box-shadow: inset 0px -6px 0px #1e1e1e;
+    position: relative
   }
   
   .header-content {
