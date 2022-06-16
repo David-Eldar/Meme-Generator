@@ -2,20 +2,21 @@
 	box-sizing: border-box;
 }
 
-html {
+/* html {
 	font-family: lato-regular;
 	font-size: 1rem;
 	line-height: 1.25;
-}
+} */
 
 body {
-	position: relative
+	/* position: relative; */
+	/* text-align: center; */
 }
 
-h2 {
+/* h2 {
 	font-family: lato-bold;
 	line-height: 1.0714;
-}
+} */
 
 img {
 	width: 100%;

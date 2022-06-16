@@ -1,4 +1,67 @@
-.canvas-container {
-    display: block;
-    position: relative;
+.editor-page {
+    display: none;
+    padding-top: 40px;
+    text-align: center;
+    
+   
 }
+
+.editor-container{
+    justify-content: center;
+}
+
+.canvas-editor{
+    flex:1;
+  
+}
+
+.control-panel {
+    display: grid;
+    width: 300px;
+    background-color: rgb(139, 133, 125);
+}
+
+.text-input{
+    width: fit-content;
+    height: fit-content;
+}
+
+/* .editor input {
+    margin-bottom: 20px;
+}
+
+.editor-options {
+    margin-bottom: 20px;
+}
+
+.editor-options a {
+    margin-inline-end: 10px;
+}
+
+.btn-option {
+    padding: 5px;
+    height: 45px;
+    width: 45px;
+    cursor: pointer;
+    border: 1px solid #c5c3c3;
+    background-color: #8b12ee;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-option img {
+    height: 30px;
+}
+
+.editor-text-options {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px 8px;
+    margin-bottom: 15px;
+}
+
+/* .font-select {
+    grid-column: span 3;
+    height: 25px;
+} */ 

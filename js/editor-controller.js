@@ -1,12 +1,36 @@
 'use strict'
 
+// const elImgGallery = document.querySelector('.gallery-container')
+// const elEditor =  document.querySelector('.editor-page')
 
-function renderCanvas() {
-    var elImg = document.querySelector('.selected-img')
-    
-    elImg.onload = () => {
+const elCanvas = document.querySelector('.canvas-editor')
+const gCtx = elCanvas.getContext('2d')
 
-        gCtx.drawImage (elImg,0,0, gElCanvas.width, gElCanvas.hight )
+
+
+
+
+function renderEditor() {
+    const currImg = getCurrImg()
+
+    const memeImg = new Image()
+    memeImg.onload = function () {
+        gCtx.drawImage(memeImg, 0, 0, elCanvas.width, elCanvas.height)
+        // renderText()
     }
+    memeImg.src = currImg.url
+    console.log(currImg);
+    document.querySelector('.editor-page').style.display = 'block'
+
 
 }
+
+
+function renderEmptyEditor() {
+    document.querySelector('.editor-page').style.display = 'block'
+}
+
+
+
+
+

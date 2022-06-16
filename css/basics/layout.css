@@ -1,0 +1,10 @@
+
+
+/* .gallery-layout {
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+} */
+
+.editor-layout{
+    flex-flow: row wrap;  
+}

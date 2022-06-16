@@ -1,41 +1,39 @@
 'use strict'
-var gElCanvas
-var gCtx
+
+
+
+
+const elGallery = document.querySelector('.img-gallery')
 
 function onInit() {
-    gElCanvas = document.querySelector('.canvas-editor')
-    gCtx = gElCanvas.getContext('2d')
     renderGallery()
 }
 
+
+//render main view//
+
 function renderGallery() {
-    const imgIdx = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
-    const elImgGallery = document.querySelector('.gallery-container')
-    const elSearch = document.querySelector('.search-bar')
-    const elSelectedImg = document.querySelector('.selected-img')
-    const elCanvas = document.querySelector('.canvas-container')
 
-    imgIdx.forEach((i) => {
-        const elImg = document.querySelector('img')
-        elImg.src = `img/${i}.jpg`
-        elImg.classList.add('meme-img')
+    const imgs = showImgs()
+    const strHtmls = imgs.map(img =>
+        `<img onClick="onImgSelect(${img.id})"src=${img.url} alt="meme">`)
+    elGallery.innerHTML = strHtmls.join('')
 
-        elImg.addEventListener('click', () => {
-
-            elSelectedImg.src = `img/${i}.jpg`
-            renderCanvas()
-            elImgGallery.style.display = 'none'
-            elSearch.style.display = 'none'
-            elCanvas.style.display = 'block'
-            elCanvas.style.display = 'block'
-            elSelectedImg.style.display = 'none'
-
-        })
-
-        elImgGallery.appendChild(elImg)
-
-    })
 }
+
+
+
+
+// when image is clicked //
+
+function onImgSelect(imgId) {
+    setCurrImg(imgId)
+    document.querySelector('.gallery-container').style.display = 'none'
+    renderEditor()
+    // goToEditor()
+}
+
+
 
 
 

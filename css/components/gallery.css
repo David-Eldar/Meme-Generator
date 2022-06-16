@@ -1,29 +1,43 @@
 
 
-.main-contant{
+/* .main-contant{
     margin-top:  40px;
-}
+} */
 
 .search-bar{
     margin-bottom: 5em;
+    background-color: rgb(52, 128, 183);
+    /* height: 30px; */
+    padding: 1%;
+    color: bisque;
+    width: fit-content;
+    border: 2px solid black;
+    border-radius: 15px;
+
+    
 }
 
 
 .gallery-container {
-    display: grid;
-    
-    grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
-    grid-gap: 20px;
+    padding: 50px 20px;
     /* padding: 15px;
     grid-auto-flow: dense;
     margin:  0 auto; */
-    /* background-image: url(/img/green-grass-background.jpg); */
-    background-color: rgba(183, 188, 170, 0.911);
+    background-image: url(/des-img/grass.jpeg);
+    /* background-blend-mode: color; */
+    /* background-color: rgba(183, 188, 170, 0.911); */
     
 }
 
+.img-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(199.55px, 1fr));
+    grid-gap: 20px;
+  }
+
 img {
     border-radius: 2px;
+    border: 2px solid black;
     height: 8em;
     width: 8em;
 }

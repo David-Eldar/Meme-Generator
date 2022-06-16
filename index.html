@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css" />
+  <title>meme-image-gallery</title>
+</head>
+
+<body onload="onInit()">
+  <main class="main-contant"></main>
+  <header class="main-header">
+    <div class="header-content main-layout flex align-center space-between">
+      <div class="main-logo">MeeeeMiM <span class="logo-green">🐑</span></div>
+
+      <ul class="main-nav flex clean-list">
+        <li><a class="active" href="#" onclick="onBackToGallery(this)">Gallery</a></li>
+        <li><a class="active" href="#" onclick="onGoToEditor(this)">Memes</a></li>
+        <li><a class="active" href="#" onclick="onActivePage(this)">About</a></li>
+      </ul>
+      <button class="hamburger-btn" onclick="toggleHamburger()">☰</button>
+    </div>
+  </header>
+
+  <div class="gallery-container">
+    <div class="search-bar">
+
+      <input type="text" name="txt" placeholder="search image">
+      or upload <input type="file" class="file-input-btn" name="image" onchange="onImgInput(event)" />
+      <button onclick="goToEditor()" class="editor">Submit</button>
+    </div>
+    <section class="img-gallery gallery layout flex">
+      <!-- <img src="img/1.jpg" alt="">
+                <img src="img/2.jpg" alt="">
+                <img src="img/3.jpg" alt="">
+                <img src="img/4.jpg" alt="">
+                <img src="img/5.jpg" alt="">
+                <img src="img/6.jpg" alt="">
+                <img src="img/7.jpg" alt="">
+                <img src="img/8.jpg" alt="">
+                <img src="img/9.jpg" alt="">
+                <img src="img//10.jpg" alt="">
+                <img src="img//11.jpg" alt="">
+                <img src="img//12.jpg" alt="">
+                <img src="img//13.jpg" alt="">
+                <img src="img//14.jpg" alt="">
+                <img src="img//15.jpg" alt="">
+                <img src="img//16.jpg" alt="">
+                <img src="img//17.jpg" alt="">
+                <img src="img//18.jpg" alt=""> -->
+    </section>
+  </div>
+
+  <!-- <div class="editor-container flex justify-center" >
+            <div class="canvas-container">
+            <canvas class="canvas-editor" width="650" height="650" style="outline:1px solid rgb(0, 0, 0)" onclick="draw(event)"></canvas>
+        </div>
+
+            <div class="control-panel flex">
+                
+
+                    <input
+                      type="text"
+                      class="text"
+                      placeholder="insert text"
+                      oninput="onSetTextLine(this.value)"
+                    />
+              
+                    <div class="editor-options flex justify-center align-center">
+                      <a href="#" class="btn-option text-updown">
+                        <img src="ICONS/up-and-down-opposite-double-arrows-side-by-side.png" alt="" />
+                      </a>
+                      <a href="#" class="btn-option text-add">
+                        <img src="ICONS/add.png" alt="" />
+                      </a>
+                      <a href="#" class="btn-option text-delete">
+                        <img src="ICONS/trash.png" alt="" />
+                      </a>
+                    </div>
+              
+                    <div class="editor-text-options grid">
+                      <a
+                        href="#"
+                        class="btn-option text-increase"
+                        onclick="onChangeFontSize(5)"
+                      >
+                        <img src="ICONS/increase font - icon.png" alt="" />
+                      </a>
+                      <a
+                        href="#"
+                        class="btn-option text-decrease"
+                        onclick="onChangeFontSize(-5)"
+                      >
+                        <img src="ICONS/decrease font - icon.png" alt="" />
+                      </a>
+                      <a href="#" class="btn-option text-align-left">
+                        <img src="ICONS/align-to-left.png" alt="" />
+                      </a>
+                      <a href="#" class="btn-option text-align-center">
+                        <img src="ICONS/center-text-alignment.png" alt="" />
+                      </a>
+                      <a href="#" class="btn-option align-right-">
+                        <img src="ICONS/align-to-right.png" alt="" />
+                      </a>
+                      <select class="font-select">
+                        <option value="impact">Impact</option>
+                      </select>
+                <input
+                type="color"
+                id="color"
+                name="shColor"
+                onchange="onPickColorsh(this.value)"
+                form="frmRegister"
+                value="#f5f99d"
+              />
+              <input
+                type="color"
+                id="color"
+                name="stColor"
+                onchange="onPickColorst(this.value)"
+                form="frmRegister"
+                value="#000000"
+              />
+              <input type="text" name="text" placeholder="Insert text" />
+              
+            
+            
+             
+                <input class="text-input" onfocus="this.value=''" type="text" placeholder="Edit Text..."
+                    oninput="onEditTxt(this.value)">
+                    <button onclick="setShape('text')">Submit</button>
+                    </div>
+             <img src="" alt="" class="selected-img" /> -->
+  <!-- </div>
+
+        </div> -->
+  <section class="editor-page">
+    <div class="editor-container flex">
+      <div class="canvas-container">
+        <canvas class="canvas-editor" width="500" height="500" style="outline:1px solid rgb(0, 0, 0)"
+          onclick="draw(event)"></canvas>
+      </div>
+
+      <div class="control-panel grid">
+        <input class="text-input" onfocus="this.value=''" type="text" placeholder="What's your meeee?"
+          oninput="onEditTxt(this.value)">
+      </div>
+    </div>
+    <!-- <button class="back-btn" onclick="onBackToGallery(this)">Back To Gallery</button> -->
+  </section>
+  </main>
+  <script src="js/header-controller.js"></script>
+  <script src="js/gallery-service.js"></script>
+  <script src="js/gallery-controller.js"></script>
+  <script src="js/editor-service.js"></script>
+  <script src="js/editor-controller.js"></script>
+</body>
+
+</html>
