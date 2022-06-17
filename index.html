@@ -27,8 +27,8 @@
     <div class="gallery-container">
 
       <div class="search-bar">
-        <input type="text" name="txt" class="text-search" placeholder="search by keyword">
-        <img onclick="searchByKeyWord()"  src="/ICONS/search-icon.png" alt="search">
+        <input type="text" name="txt" class="text-search" placeholder=" search images by keyword">
+        <img onclick="searchByKeyWord()" src="/ICONS/search-icon.png" alt="search">
         <!-- or upload <input type="file" class="file-input-btn" name="image" onchange="onImgInput(event)" /> -->
       </div>
 
@@ -141,17 +141,67 @@
     <section class="editor-page">
       <div class="editor-container flex">
         <div class="canvas-container">
-          <canvas class="canvas-editor" width="500" height="500" style="outline:1px solid rgb(0, 0, 0)"
-            onclick="draw(event)"></canvas>
+          <canvas class="canvas-editor" style="outline: 3px solid rgb(0, 0, 0)" onclick="draw(event)"></canvas>
         </div>
 
-        <div class="control-panel grid">
+
+        <div class="control-panel flex" style="outline: 3px solid rgb(0, 0, 0)">
           <input class="text-input" type="text" placeholder="What's your meeee?" oninput="onTextBar(this.value)">
+
+
+          <select class="font-family" value="Impact" onchange="onSetFontFamily(this.value)">
+            <option value="Impact">Imapct</option>
+            <option value="sans-serif">sans-serif</option>
+          </select>
+
+
+          <div class="btn-container flex justify-center align-center">
+            <a href="#" class="line-btn text-updown">
+              <img onclick="onSwitchLine()" src="ICONS/up-and-down-opposite-double-arrows-side-by-side.png" alt="" />
+            </a>
+            <a href="#" class="line-btn text-add">
+              <img onclick="onAddLine()" src="ICONS/add.png" alt="" />
+            </a>
+            <a href="#" class="line-btn text-delete">
+              <img onclick="onDeleteLine()" src="ICONS/trash.png" alt="" />
+            </a>
+          </div>
+
+          <div class="text-btns flex justify-center align-center">
+            <a href="#" class="btn-option text-increase" onclick="onChangeFontSize(5)">
+              <img src="ICONS/increase font - icon.png" alt="" />
+            </a>
+            <a href="#" class="btn-option text-decrease" onclick="onChangeFontSize(-5)">
+              <img src="ICONS/decrease font - icon.png" alt="" />
+            </a>
+            <a href="#" class="btn-option text-align-left">
+              <img src="ICONS/align-to-left.png" alt="" />
+            </a>
+            <a href="#" class="btn-option text-align-center">
+              <img src="ICONS/center-text-alignment.png" alt="" />
+            </a>
+            <a href="#" class="btn-option align-right-">
+              <img src="ICONS/align-to-right.png" alt="" />
+            </a>
+          </div>
+
+          <div class="set-colors flex">
+           <P>Fill Color  <input type="color" name="fill-color" class="color" oninput="onChangeFillColor(this.value)" /></P>
+           <p>Stroke color  <input type="color" name="stroke-color" class="color" oninput="onChangeStrokeColor(this.value)"/></p>
+          </div>
+          <button href="#" onclick="downloadCanvas(this)" download="my-canvas">Download your meme</a>
         </div>
-      </div>
-      <!-- <button class="back-btn" onclick="onBackToGallery(this)">Back To Gallery</button> -->
+        <!-- <button class="back-btn" onclick="onBackToGallery(this)">Back To Gallery</button> -->
     </section>
   </main>
+  <hr>
+  <div class="social-footer">
+    <img id="fb-logo" onClick="uploadImg()" src="img/ICONS/facebook-logo.png" alt="facebook">
+  </div>
+  <footer>
+    <p>© David Eldar - Trolling sence 1983</p>
+  </footer>
+
   <script src="js/control/editor-controller.js"></script>
   <script src="js/service/gallery-service.js"></script>
   <script src="js/control/gallery-controller.js"></script>

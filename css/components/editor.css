@@ -2,68 +2,113 @@
     display: none;
     padding-top: 40px;
     text-align: center;
-    
-   
+
+
 }
 
-.editor-container{
-    justify-content: center;
-    margin-top: 150px;
+.editor-container {
+
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2px;
     gap: 5px;
 }
 
-.canvas-editor{
-    flex:1;
-  
+.editor-container a {
+    margin: auto;
+    margin-inline: 3% 3%;
+
 }
+
+.editor-container img {
+    margin: auto;
+    padding: 4px;
+    /* height: 45px; */
+    width: 45px;
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 10px;
+
+}
+
+
+.canvas-editor {
+    flex: 1;
+    height: 400px;
+    width: 400px;
+    background-color: antiquewhite;
+    border-radius: 10px
+}
+
 
 .control-panel {
-    display: grid;
-    width: 300px;
-    background-color: rgb(150, 211, 184);
-}
-
-.text-input{
-    width: fit-content;
-    height: fit-content;
-}
-
-/* .editor input {
-    margin-bottom: 20px;
-}
-
-.editor-options {
-    margin-bottom: 20px;
-}
-
-.editor-options a {
-    margin-inline-end: 10px;
-}
-
-.btn-option {
-    padding: 5px;
-    height: 45px;
-    width: 45px;
-    cursor: pointer;
-    border: 1px solid #c5c3c3;
-    background-color: #8b12ee;
+    padding: 15px;
     border-radius: 10px;
-    display: flex;
+    flex-direction: column;
+    text-align: center;
     justify-content: center;
-    align-items: center;
+    width: 60%;
+    height: fit-content;
+    padding: 0, 50;
+    background-color: rgb(150, 211, 184);
+
+
 }
 
-.btn-option img {
-    height: 30px;
+
+.text-input {
+    margin: auto;
+    width: 90%;
+    height: 40px;
+    border-radius: 10px;
+    border: 5px solid black;
 }
 
-.editor-text-options {
-    grid-template-columns: repeat(5, 1fr);
-    gap: 8px 8px;
-    margin-bottom: 15px;
+.font-family {
+    margin: auto;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    border: 5px solid black;
+    border-radius: 10px;
+    width: 40%;
+    height: 35px;
+
 }
 
-/* .font-select {
-    grid-column: span 3;
-    height: 25px;
-} */ 
+
+.btn-container {
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.text-btns {
+    /* grid-template-columns: repeat(5, 60px);
+    gap: 8px 8px; */
+    margin-top: 15px;
+    justify-content: center;
+
+}
+
+
+.set-colors {
+    margin-top: 15px;
+    justify-content: center;
+    gap: 6%;
+    
+}
+
+
+.set-colors input {
+
+  width: 80px;
+
+}
+
+.set-colors p {
+    font-family:Impact;
+    font-size: larger;
+    max-width: 100%;
+    height: auto;
+}

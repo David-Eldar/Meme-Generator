@@ -13,6 +13,7 @@
 }
 
 .search-bar{
+    margin: auto;
     display: flex;
     justify-content: center;
     margin-bottom: 5em;
@@ -28,7 +29,8 @@
 .text-search {
     position: relative;
     width: 300px;
-    height: 30px;
+    height: 35px;
+    border-radius: 10px;
 }
 
 .search-bar img {

@@ -2,14 +2,18 @@
 	box-sizing: border-box;
 }
 
-/* html {
+html {
 	font-family: lato-regular;
 	font-size: 1rem;
 	line-height: 1.25;
-} */
+	background-image: url(/des-img/grass.jpeg);
+	/* background-color: rgb(179, 199, 186); */
+}
+
+
 
 body {
-	background-image: url(/des-img/grass.jpeg);
+	
 	/* position: relative; */
 	/* text-align: center; */
 }
@@ -23,8 +27,11 @@ img {
 	width: 100%;
 }
 
-a {
-	font-family: lato-bold;
-	text-decoration: none;
-	color: var(--clr-link-txt);
+footer {
+	/* background-color:rgba(53, 131, 195, 0.68); */
+	border:2px;
+	color: rgb(0, 0, 0);
+    text-align: center;
+	height: 100%;
+    
 }

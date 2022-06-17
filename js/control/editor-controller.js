@@ -56,10 +56,15 @@ function renderText() {
 
 
 function onTextBar(value) {
-    setTextLine(value)
+  setLineTxt(value)
     renderMeme()
 
 
+}
+
+function onSwitchLine() {
+  switchLine()
+  renderMeme()
 }
 
 function onAddLine() {

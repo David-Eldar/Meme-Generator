@@ -106,8 +106,8 @@ function showImgs() {
 
 
 function getCurrImg() {
-    return  gImgs.find(img => img.id === gMeme.selectedImgId)
-    
+    return gImgs.find(img => img.id === gMeme.selectedImgId)
+
 }
 
 
@@ -119,7 +119,7 @@ function setCurrImg(imgId) {
 
 
 
-function searchByKeyWord(){
+function searchByKeyWord() {
     console.log('check');
 
     const textSearch = document.querySelector('.text-input').value
@@ -130,5 +130,5 @@ function searchByKeyWord(){
 }
 
 
-    
+
 
