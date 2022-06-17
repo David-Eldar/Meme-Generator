@@ -10,7 +10,7 @@
 </head>
 
 <body onload="onInit()">
-  <main class="main-contant"></main>
+
   <header class="main-header">
     <div class="header-content main-layout flex align-center space-between">
       <div class="main-logo">MeeeeMiM <span class="logo-green">🐑</span></div>
@@ -23,16 +23,18 @@
       <button class="hamburger-btn" onclick="toggleHamburger()">☰</button>
     </div>
   </header>
+  <main class="main-contant">
+    <div class="gallery-container">
 
-  <div class="gallery-container">
-    <div class="search-bar">
+      <div class="search-bar">
+        <input type="text" name="txt" class="text-search" placeholder="search by keyword">
+        <img onclick="searchByKeyWord()"  src="/ICONS/search-icon.png" alt="search">
+        <!-- or upload <input type="file" class="file-input-btn" name="image" onchange="onImgInput(event)" /> -->
+      </div>
 
-      <input type="text" name="txt" placeholder="search image">
-      or upload <input type="file" class="file-input-btn" name="image" onchange="onImgInput(event)" />
-      <button onclick="goToEditor()" class="editor">Submit</button>
-    </div>
-    <section class="img-gallery gallery layout flex">
-      <!-- <img src="img/1.jpg" alt="">
+
+      <section class="img-gallery gallery layout flex">
+        <!-- <img src="img/1.jpg" alt="">
                 <img src="img/2.jpg" alt="">
                 <img src="img/3.jpg" alt="">
                 <img src="img/4.jpg" alt="">
@@ -50,10 +52,10 @@
                 <img src="img//16.jpg" alt="">
                 <img src="img//17.jpg" alt="">
                 <img src="img//18.jpg" alt=""> -->
-    </section>
-  </div>
+      </section>
+    </div>
 
-  <!-- <div class="editor-container flex justify-center" >
+    <!-- <div class="editor-container flex justify-center" >
             <div class="canvas-container">
             <canvas class="canvas-editor" width="650" height="650" style="outline:1px solid rgb(0, 0, 0)" onclick="draw(event)"></canvas>
         </div>
@@ -133,29 +135,29 @@
                     <button onclick="setShape('text')">Submit</button>
                     </div>
              <img src="" alt="" class="selected-img" /> -->
-  <!-- </div>
+    <!-- </div>
 
         </div> -->
-  <section class="editor-page">
-    <div class="editor-container flex">
-      <div class="canvas-container">
-        <canvas class="canvas-editor" width="500" height="500" style="outline:1px solid rgb(0, 0, 0)"
-          onclick="draw(event)"></canvas>
-      </div>
+    <section class="editor-page">
+      <div class="editor-container flex">
+        <div class="canvas-container">
+          <canvas class="canvas-editor" width="500" height="500" style="outline:1px solid rgb(0, 0, 0)"
+            onclick="draw(event)"></canvas>
+        </div>
 
-      <div class="control-panel grid">
-        <input class="text-input" onfocus="this.value=''" type="text" placeholder="What's your meeee?"
-          oninput="onEditTxt(this.value)">
+        <div class="control-panel grid">
+          <input class="text-input" type="text" placeholder="What's your meeee?" oninput="onTextBar(this.value)">
+        </div>
       </div>
-    </div>
-    <!-- <button class="back-btn" onclick="onBackToGallery(this)">Back To Gallery</button> -->
-  </section>
+      <!-- <button class="back-btn" onclick="onBackToGallery(this)">Back To Gallery</button> -->
+    </section>
   </main>
-  <script src="js/header-controller.js"></script>
-  <script src="js/gallery-service.js"></script>
-  <script src="js/gallery-controller.js"></script>
-  <script src="js/editor-service.js"></script>
-  <script src="js/editor-controller.js"></script>
+  <script src="js/control/editor-controller.js"></script>
+  <script src="js/service/gallery-service.js"></script>
+  <script src="js/control/gallery-controller.js"></script>
+  <script src="js/service/editor-service.js"></script>
+  <script src="js/control/header-controller.js"></script>
+  <script src="js/service/upload-service.js"></script>
 </body>
 
 </html>

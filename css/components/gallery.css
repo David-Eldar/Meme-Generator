@@ -1,33 +1,44 @@
 
 
-/* .main-contant{
-    margin-top:  40px;
-} */
+.main-contant{
+    text-align: center;
+    
+}
+.gallery-container {
+    
+    padding: 50px 50px;
+
+    
+    
+}
 
 .search-bar{
+    display: flex;
+    justify-content: center;
     margin-bottom: 5em;
+    /* border-width: 10px; */
     background-color: rgb(52, 128, 183);
-    /* height: 30px; */
-    padding: 1%;
-    color: bisque;
+    padding: 1.5%;
     width: fit-content;
+    height: fit-content;
     border: 2px solid black;
-    border-radius: 15px;
+    border-radius: 15px; 
+    gap: 8px;
+}
+.text-search {
+    position: relative;
+    width: 300px;
+    height: 30px;
+}
 
-    
+.search-bar img {
+    border-color: rgb(52, 128, 183);
+    height: 2em;
+    width: 2em;
+    cursor: pointer;
 }
 
 
-.gallery-container {
-    padding: 50px 20px;
-    /* padding: 15px;
-    grid-auto-flow: dense;
-    margin:  0 auto; */
-    background-image: url(/des-img/grass.jpeg);
-    /* background-blend-mode: color; */
-    /* background-color: rgba(183, 188, 170, 0.911); */
-    
-}
 
 .img-gallery {
     display: grid;
@@ -40,5 +51,6 @@ img {
     border: 2px solid black;
     height: 8em;
     width: 8em;
+    cursor: pointer;
 }
 

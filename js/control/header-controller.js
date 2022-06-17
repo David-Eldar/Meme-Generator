@@ -27,6 +27,6 @@ function onBackToGallery () {
 function onGoToEditor () {
 
     document.querySelector('.gallery-container').style.display = 'none'
-    renderEmptyEditor()
+    renderEditor()
 
 }

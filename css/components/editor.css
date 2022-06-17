@@ -8,6 +8,8 @@
 
 .editor-container{
     justify-content: center;
+    margin-top: 150px;
+    gap: 5px;
 }
 
 .canvas-editor{
@@ -18,7 +20,7 @@
 .control-panel {
     display: grid;
     width: 300px;
-    background-color: rgb(139, 133, 125);
+    background-color: rgb(150, 211, 184);
 }
 
 .text-input{

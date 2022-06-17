@@ -10,6 +10,10 @@ function onInit() {
 }
 
 
+// ------------------------------------------------------------//
+//            ------------RENDER-----------                   //
+
+
 //render main view//
 
 function renderGallery() {
@@ -21,7 +25,7 @@ function renderGallery() {
 
 }
 
-
+// ------------------------------------------------------------//
 
 
 // when image is clicked //
@@ -29,7 +33,7 @@ function renderGallery() {
 function onImgSelect(imgId) {
     setCurrImg(imgId)
     document.querySelector('.gallery-container').style.display = 'none'
-    renderEditor()
+    renderMeme()
     // goToEditor()
 }
 

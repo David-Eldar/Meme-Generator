@@ -95,26 +95,38 @@ var gImgs = [
 
 var gSearchFilter = ''
 
+function setSearchFilter(value) {
+    gSearchFilter = value.toLowerCase()
+}
 
 function showImgs() {
     if (!gSearchFilter) return gImgs
     return gImgs.filter(img => img.keywords.includes(gSearchFilter))
 }
 
+
 function getCurrImg() {
-    const img = gImgs.find(img => img.id === gCurrMeme.selectedImgId)
-    return img
+    return  gImgs.find(img => img.id === gMeme.selectedImgId)
+    
 }
 
 
 function setCurrImg(imgId) {
-    gCurrMeme.selectedImgId = imgId
+    gMeme.selectedImgId = imgId
 }
 
 
-function getCurrMeme() {
- console.log(gCurrMeme);
-    return gCurrMeme
+
+
+
+function searchByKeyWord(){
+    console.log('check');
+
+    const textSearch = document.querySelector('.text-input').value
+    setSearchFilter(textSearch)
+    renderGallery()
+    // // keywordsCountMapUpdate(textSearch)
+    // renderSuggestion(textSearch)
 }
 
 
