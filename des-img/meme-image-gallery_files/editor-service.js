@@ -4,7 +4,7 @@ const gElCanvas = document.querySelector('.canvas-editor')
 const gCtx = gElCanvas.getContext('2d')
 
 
-var gTxtColor = document.querySelector("[name=fill-color]").style.color
+var  gTxtColor = document.querySelector("[name=fill-color]").style.color
 var gStrkColor = document.querySelector("[name=stroke-color]").style.color
 
 
@@ -19,7 +19,7 @@ var gMeme =
 
         {
             txt: 'I sometimes eat Falafel',
-            size: 20,
+            size: 30,
             align: 'center',
             color: 'black',
             font: 'Impact',
@@ -29,7 +29,6 @@ var gMeme =
             }
 
         },
-    
 
     ]
 
@@ -77,13 +76,13 @@ function addLine() {
 function createNewLine() {
     return {
         txt: "don't stop meme...",
-        size: 20,
+        size: 40,
         align: 'center',
         color: 'black',
         font: 'Impact',
         pos: {
             x: gElCanvas.width / 2,
-            y: gElCanvas.height / 2
+            y: gElCanvas.width / -80
         }
     }
 }
@@ -98,25 +97,12 @@ function switchLine() {
 
 }
 
-// delete line
 function deleteLine() {
     gMeme.lines.splice(gMeme.selectedLineIdx, 1)
 }
 
 
-function getLineWidth() {
-    return gMeme.lines[gMeme.selectedLineIdx].width
-}
+// function getLineWidth() {
+//     return gMeme.lines[gMeme.selectedLineIdx].width
+// }
 
-
-function changeFontSize(diff) {
-    const num = gMeme.lines[gMeme.selectedLineIdx].size
-    gMeme.lines[gMeme.selectedLineIdx].size = num + diff
-    console.log(num + diff)
-}
-
-//download the img to computer
-function downloadCanvas(elLink) {
-    var imgContent = gElCanvas.toDataURL("image/jpeg") // image/jpeg the default format
-    elLink.href = imgContent
-}

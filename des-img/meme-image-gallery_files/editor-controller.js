@@ -43,19 +43,19 @@ function renderText() {
         gCtx.textAlign = line.align
         gCtx.fillStyle = line.color
 
-        // if (idx === 0) {
-        //   //top line
-        //   gCtx.fillText(line.txt, gElCanvas.width / 2, 50)
-        // } else if (idx === gMeme.lines.length - 1) {
-        //   //bottom line
-        //   gCtx.fillText(line.txt, gElCanvas.width / 2, gElCanvas.height - 50)
-        // } else {
-        //   //center line
-        //   gCtx.fillText(line.txt, gElCanvas.width / 2, gElCanvas.height / 2)
-        // }
+        if (idx === 0) {
+          //top line
+          gCtx.fillText(line.txt, gElCanvas.width / 2, 50)
+        } else if (idx === gMeme.lines.length - 1) {
+          //bottom line
+          gCtx.fillText(line.txt, gElCanvas.width / 2, gElCanvas.height - 50)
+        } else {
+          //center line
+          gCtx.fillText(line.txt, gElCanvas.width / 2, gElCanvas.height / 2)
+        }
 
-        gCtx.fillText(line.txt, line.pos.x, line.pos.y)
-        gCtx.strokeText(line.txt, line.pos.x, line.pos.y)
+        // gCtx.fillText(line.txt, line.pos.x, line.pos.y)
+        // gCtx.strokeText(line.txt, line.pos.x, line.pos.y)
     })
 
 
@@ -91,43 +91,18 @@ function onChangeStrokeColor(color) {
 
 
 function onAddLine() {
+  
   addLine ()
   renderMeme()
 }
 
-function onSwitchLine() {
-  switchLine()
-  renderMeme()
-}
-
-function onDeleteLine() {
-  deleteLine()
-  renderMeme()
-}
-
-
-function onChangeFontSize(diff) {
-  changeFontSize(diff)
-  renderMeme()
-}
 
 
 
 
-function drawSelectedRect(line) {
-  var textWidth = getLineWidth()
-  var textHeight = line.size
 
-  gCtx.lineWidth = 1
-  gCtx.strokeStyle = "#f8f9fa"
-  gCtx.strokeRect(
-    line.pos.x - 5,
-    line.pos.y - textHeight + 5,
-    textWidth + 10,
-    textHeight + 5
-  )
-  gCtx.stroke()
-}
+
+
 
 
 

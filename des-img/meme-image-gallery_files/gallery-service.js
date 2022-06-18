@@ -104,9 +104,6 @@ function showImgs() {
     return gImgs.filter(img => img.keywords.includes(gSearchFilter))
 }
 
-function setCurrImg(imgId) {
-    gMeme.selectedImgId = imgId
-}
 
 function getCurrImg() {
     return gImgs.find(img => img.id === gMeme.selectedImgId)
@@ -114,7 +111,9 @@ function getCurrImg() {
 }
 
 
-
+function setCurrImg(imgId) {
+    gMeme.selectedImgId = imgId
+}
 
 
 

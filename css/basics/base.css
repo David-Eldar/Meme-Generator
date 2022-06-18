@@ -6,8 +6,8 @@ html {
 	font-family: lato-regular;
 	font-size: 1rem;
 	line-height: 1.25;
-	background-image: url(/des-img/grass.jpeg);
-	/* background-color: rgb(179, 199, 186); */
+	background-color: #194e60;
+	background-image: url(/des-img/green-grass-background.jpg);
 }
 
 
@@ -23,15 +23,7 @@ body {
 	line-height: 1.0714;
 } */
 
-img {
+/* img {
 	width: 100%;
-}
+} */
 
-footer {
-	/* background-color:rgba(53, 131, 195, 0.68); */
-	border:2px;
-	color: rgb(0, 0, 0);
-    text-align: center;
-	height: 100%;
-    
-}

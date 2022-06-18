@@ -96,19 +96,39 @@
     margin-top: 15px;
     justify-content: center;
     gap: 6%;
-    
+
 }
 
 
 .set-colors input {
 
-  width: 80px;
+    width: 80px;
 
 }
 
 .set-colors p {
-    font-family:Impact;
+    font-family: Impact;
     font-size: larger;
     max-width: 100%;
     height: auto;
+}
+
+
+.share-tab{
+    margin: auto;
+    gap: 10px;
+}
+
+.download-btn {
+    margin: auto;
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    border: 2px solid black;
+   cursor: pointer;
+}
+
+.share-tab img {
+    background-color: rgb(63, 142, 208);
+    width: 35px;
 }

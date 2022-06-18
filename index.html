@@ -55,89 +55,8 @@
       </section>
     </div>
 
-    <!-- <div class="editor-container flex justify-center" >
-            <div class="canvas-container">
-            <canvas class="canvas-editor" width="650" height="650" style="outline:1px solid rgb(0, 0, 0)" onclick="draw(event)"></canvas>
-        </div>
 
-            <div class="control-panel flex">
-                
-
-                    <input
-                      type="text"
-                      class="text"
-                      placeholder="insert text"
-                      oninput="onSetTextLine(this.value)"
-                    />
-              
-                    <div class="editor-options flex justify-center align-center">
-                      <a href="#" class="btn-option text-updown">
-                        <img src="ICONS/up-and-down-opposite-double-arrows-side-by-side.png" alt="" />
-                      </a>
-                      <a href="#" class="btn-option text-add">
-                        <img src="ICONS/add.png" alt="" />
-                      </a>
-                      <a href="#" class="btn-option text-delete">
-                        <img src="ICONS/trash.png" alt="" />
-                      </a>
-                    </div>
-              
-                    <div class="editor-text-options grid">
-                      <a
-                        href="#"
-                        class="btn-option text-increase"
-                        onclick="onChangeFontSize(5)"
-                      >
-                        <img src="ICONS/increase font - icon.png" alt="" />
-                      </a>
-                      <a
-                        href="#"
-                        class="btn-option text-decrease"
-                        onclick="onChangeFontSize(-5)"
-                      >
-                        <img src="ICONS/decrease font - icon.png" alt="" />
-                      </a>
-                      <a href="#" class="btn-option text-align-left">
-                        <img src="ICONS/align-to-left.png" alt="" />
-                      </a>
-                      <a href="#" class="btn-option text-align-center">
-                        <img src="ICONS/center-text-alignment.png" alt="" />
-                      </a>
-                      <a href="#" class="btn-option align-right-">
-                        <img src="ICONS/align-to-right.png" alt="" />
-                      </a>
-                      <select class="font-select">
-                        <option value="impact">Impact</option>
-                      </select>
-                <input
-                type="color"
-                id="color"
-                name="shColor"
-                onchange="onPickColorsh(this.value)"
-                form="frmRegister"
-                value="#f5f99d"
-              />
-              <input
-                type="color"
-                id="color"
-                name="stColor"
-                onchange="onPickColorst(this.value)"
-                form="frmRegister"
-                value="#000000"
-              />
-              <input type="text" name="text" placeholder="Insert text" />
-              
-            
-            
-             
-                <input class="text-input" onfocus="this.value=''" type="text" placeholder="Edit Text..."
-                    oninput="onEditTxt(this.value)">
-                    <button onclick="setShape('text')">Submit</button>
-                    </div>
-             <img src="" alt="" class="selected-img" /> -->
-    <!-- </div>
-
-        </div> -->
+        </div> 
     <section class="editor-page">
       <div class="editor-container flex">
         <div class="canvas-container">
@@ -168,10 +87,10 @@
           </div>
 
           <div class="text-btns flex justify-center align-center">
-            <a href="#" class="btn-option text-increase" onclick="onChangeFontSize(5)">
+            <a href="#" class="btn-option text-increase" onclick="onChangeFontSize(3)">
               <img src="ICONS/increase font - icon.png" alt="" />
             </a>
-            <a href="#" class="btn-option text-decrease" onclick="onChangeFontSize(-5)">
+            <a href="#" class="btn-option text-decrease" onclick="onChangeFontSize(-3)">
               <img src="ICONS/decrease font - icon.png" alt="" />
             </a>
             <a href="#" class="btn-option text-align-left">
@@ -186,20 +105,22 @@
           </div>
 
           <div class="set-colors flex">
-           <P>Fill Color  <input type="color" name="fill-color" class="color" oninput="onChangeFillColor(this.value)" /></P>
+           <P>Fill Color  <input type="color" name="fill-color" class="color" oninput="onChangeTextColor(this.value)" /></P>
            <p>Stroke color  <input type="color" name="stroke-color" class="color" oninput="onChangeStrokeColor(this.value)"/></p>
           </div>
-          <button href="#" onclick="downloadCanvas(this)" download="my-canvas">Download your meme</a>
+          <div class="share-tab flex">
+            <button class="download-btn" href="#" onclick="downloadCanvas(this)" download="my-canvas.jpg">Download your meme</button>
+            <img id="fb-logo" onClick="uploadImg()" src="/ICONS/facebook-logo.png" alt="facebook">
+          </div>
         </div>
         <!-- <button class="back-btn" onclick="onBackToGallery(this)">Back To Gallery</button> -->
     </section>
   </main>
-  <hr>
-  <div class="social-footer">
-    <img id="fb-logo" onClick="uploadImg()" src="img/ICONS/facebook-logo.png" alt="facebook">
-  </div>
+  
+
   <footer>
-    <p>© David Eldar - Trolling sence 1983</p>
+    <hr>
+      © David Eldar - Trolling sence 1983
   </footer>
 
   <script src="js/control/editor-controller.js"></script>
@@ -211,3 +132,4 @@
 </body>
 
 </html>
+

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)http://127.0.0.1:5500/index.html# -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./meme-image-gallery_files/style.css">
+  <title>meme-image-gallery</title>
+</head>
+
+<body onload="onInit()">
+
+  <header class="main-header">
+    <div class="header-content main-layout flex align-center space-between">
+      <div class="main-logo">MeeeeMiM <span class="logo-green">🐑</span></div>
+
+      <ul class="main-nav flex clean-list">
+        <li><a class="active" href="http://127.0.0.1:5500/index.html#" onclick="onBackToGallery(this)">Gallery</a></li>
+        <li><a class="active" href="http://127.0.0.1:5500/index.html#" onclick="onGoToEditor(this)">Memes</a></li>
+        <li><a class="active" href="http://127.0.0.1:5500/index.html#" onclick="onActivePage(this)">About</a></li>
+      </ul>
+      <button class="hamburger-btn" onclick="toggleHamburger()">☰</button>
+    </div>
+  </header>
+  <main class="main-contant">
+    <div class="gallery-container" style="display: none;">
+
+      <div class="search-bar">
+        <input type="text" name="txt" class="text-search" placeholder=" search images by keyword">
+        <img onclick="searchByKeyWord()" src="./meme-image-gallery_files/search-icon.png" alt="search">
+        <!-- or upload <input type="file" class="file-input-btn" name="image" onchange="onImgInput(event)" /> -->
+      </div>
+
+
+      <section class="img-gallery gallery layout flex"><img onclick="onImgSelect(1)" src="./meme-image-gallery_files/1.jpg" alt="meme"><img onclick="onImgSelect(2)" src="./meme-image-gallery_files/2.jpg" alt="meme"><img onclick="onImgSelect(3)" src="./meme-image-gallery_files/3.jpg" alt="meme"><img onclick="onImgSelect(4)" src="./meme-image-gallery_files/4.jpg" alt="meme"><img onclick="onImgSelect(5)" src="./meme-image-gallery_files/5.jpg" alt="meme"><img onclick="onImgSelect(6)" src="./meme-image-gallery_files/6.jpg" alt="meme"><img onclick="onImgSelect(7)" src="./meme-image-gallery_files/7.jpg" alt="meme"><img onclick="onImgSelect(8)" src="./meme-image-gallery_files/8.jpg" alt="meme"><img onclick="onImgSelect(9)" src="./meme-image-gallery_files/9.jpg" alt="meme"><img onclick="onImgSelect(10)" src="./meme-image-gallery_files/10.jpg" alt="meme"><img onclick="onImgSelect(11)" src="./meme-image-gallery_files/11.jpg" alt="meme"><img onclick="onImgSelect(12)" src="./meme-image-gallery_files/12.jpg" alt="meme"><img onclick="onImgSelect(12)" src="./meme-image-gallery_files/13.jpg" alt="meme"><img onclick="onImgSelect(14)" src="./meme-image-gallery_files/14.jpg" alt="meme"><img onclick="onImgSelect(15)" src="./meme-image-gallery_files/15.jpg" alt="meme"><img onclick="onImgSelect(16)" src="./meme-image-gallery_files/16.jpg" alt="meme"><img onclick="onImgSelect(17)" src="./meme-image-gallery_files/17.jpg" alt="meme"><img onclick="onImgSelect(18)" src="./meme-image-gallery_files/18.jpg" alt="meme"></section>
+    </div>
+
+
+         
+    <section class="editor-page" style="display: block;">
+      <div class="editor-container flex">
+        <div class="canvas-container">
+          <canvas class="canvas-editor" style="outline: 3px solid rgb(0, 0, 0)" onclick="draw(event)"></canvas>
+        </div>
+
+
+        <div class="control-panel flex" style="outline: 3px solid rgb(0, 0, 0)">
+          <input class="text-input" type="text" placeholder="What&#39;s your meeee?" oninput="onTextBar(this.value)">
+
+
+          <select class="font-family" value="Impact" onchange="onSetFontFamily(this.value)">
+            <option value="Impact">Imapct</option>
+            <option value="sans-serif">sans-serif</option>
+          </select>
+
+
+          <div class="btn-container flex justify-center align-center">
+            <a href="http://127.0.0.1:5500/index.html#" class="line-btn text-updown">
+              <img onclick="onSwitchLine()" src="./meme-image-gallery_files/up-and-down-opposite-double-arrows-side-by-side.png" alt="">
+            </a>
+            <a href="http://127.0.0.1:5500/index.html#" class="line-btn text-add">
+              <img onclick="onAddLine()" src="./meme-image-gallery_files/add.png" alt="">
+            </a>
+            <a href="http://127.0.0.1:5500/index.html#" class="line-btn text-delete">
+              <img onclick="onDeleteLine()" src="./meme-image-gallery_files/trash.png" alt="">
+            </a>
+          </div>
+
+          <div class="text-btns flex justify-center align-center">
+            <a href="http://127.0.0.1:5500/index.html#" class="btn-option text-increase" onclick="onChangeFontSize(5)">
+              <img src="./meme-image-gallery_files/increase font - icon.png" alt="">
+            </a>
+            <a href="http://127.0.0.1:5500/index.html#" class="btn-option text-decrease" onclick="onChangeFontSize(-5)">
+              <img src="./meme-image-gallery_files/decrease font - icon.png" alt="">
+            </a>
+            <a href="http://127.0.0.1:5500/index.html#" class="btn-option text-align-left">
+              <img src="./meme-image-gallery_files/align-to-left.png" alt="">
+            </a>
+            <a href="http://127.0.0.1:5500/index.html#" class="btn-option text-align-center">
+              <img src="./meme-image-gallery_files/center-text-alignment.png" alt="">
+            </a>
+            <a href="http://127.0.0.1:5500/index.html#" class="btn-option align-right-">
+              <img src="./meme-image-gallery_files/align-to-right.png" alt="">
+            </a>
+          </div>
+
+          <div class="set-colors flex">
+           <p>Fill Color  <input type="color" name="fill-color" class="color" oninput="onChangeTextColor(this.value)"></p>
+           <p>Stroke color  <input type="color" name="stroke-color" class="color" oninput="onChangeStrokeColor(this.value)"></p>
+          </div>
+          <div class="share-tab flex">
+            <button class="download-btn" href="#" onclick="downloadCanvas(this)" download="my-canvas">Download your meme</button>
+            <img id="fb-logo" onclick="uploadImg()" src="./meme-image-gallery_files/facebook-logo.png" alt="facebook">
+          </div>
+        </div>
+        <!-- <button class="back-btn" onclick="onBackToGallery(this)">Back To Gallery</button> -->
+    </div></section>
+  </main>
+  
+
+  <footer>
+    <hr>
+      © David Eldar - Trolling sence 1983
+  </footer>
+
+  <script src="./meme-image-gallery_files/editor-controller.js"></script>
+  <script src="./meme-image-gallery_files/gallery-service.js"></script>
+  <script src="./meme-image-gallery_files/gallery-controller.js"></script>
+  <script src="./meme-image-gallery_files/editor-service.js"></script>
+  <script src="./meme-image-gallery_files/header-controller.js"></script>
+  <script src="./meme-image-gallery_files/upload-service.js"></script>
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+
+</body></html>
